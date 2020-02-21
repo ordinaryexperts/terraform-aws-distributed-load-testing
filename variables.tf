@@ -6,6 +6,11 @@ variable "admin_email" {
   description = "Admin user email address to access the Distributed Load Testing Console"
 }
 
+variable "env" {
+  description = "Environment name for deployment, i.e. 'dev', 'qa', 'prod'"
+  default = "dev"
+}
+
 variable "vpc_cidr_block" {
   description = "CIDR block of the new VPC where AWS Fargate will be placed"
   default = "192.168.0.0/16"

@@ -10,5 +10,6 @@ resource "aws_cloudformation_stack" "distributed_load_testing" {
     SubnetBCidrBlock = var.subnet_b_cidr_block
     EgressCidr = var.egress_cidr
   }
+  # Version 1.0.0 retrieved on 2020/02/17
   template_body = "${file("${path.module}/distributed-load-testing-on-aws.template")}"
 }
